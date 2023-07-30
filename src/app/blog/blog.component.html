@@ -1,0 +1,245 @@
+{{appname}} <a target="_blanck"
+    href="https://www.youtube.com/watch?v=A05qya950Ls&list=PL8p2I9GklV47SgegxIK9pmmkO50VKS1eJ&index=46">Continue
+    video</a>
+<mat-tab-group>
+
+    <mat-tab label="9. 27video id Service/API/get data/interface its very important ">
+        Custom directives video it's important <br>
+        <h2>Services</h2>
+        <p>services are independent of component and module and can be used in multiple moduleand components</p>
+        <p>ng g service userdata
+           goto user-data.service.ts </p>
+           <div>create below constructor 
+               <h1>getData rb cb
+                   return cb
+                       name:'Vikash',
+                       age:23
+                  cb cb</h1></div> 
+                   <p>then go to component open app.component.ts 
+                   then import cb Userdataservice cb from './user-data.service'</p>
+                   <p>constructor rbprivate users: Userdataservice rb cb
+                   1. console.warn rb this.user.getDatar rb
+                   2. let data=this.user.getData();
+                   3. this.name=data.name
+                
+                }</p>
+                <p>now go to app.compnent.html then <h2><P>curl bracket name curl bracket</P></h2>
+                
+
+    </mat-tab>
+    
+    <mat-tab label="">
+    </mat-tab>
+    <mat-tab label="">
+    </mat-tab>
+    <mat-tab label="">
+    </mat-tab>
+    <mat-tab label="">
+    </mat-tab>
+
+
+    <mat-tab label="1.InterPolation:">
+        Full Name: {{firstName+ +lastName}}
+        Full Name: {{firstName+ lastName}}
+        <h1>Function</h1>
+        function :{{getName()}}<br>
+        direct :{{getName1()}}<br>
+        dynamically: {{fullName()}}<br>
+        <h2>Object</h2>
+        error: {{object}} <br>
+        Name: {{object.name}} <br>
+        Price: {{object.price}} <br>
+        <h1>Array</h1>
+        Full Array: {{Array}} <br>
+        Name elemets-wise: {{Array[0]}} <br>
+        Name element-wise: {{Array[2]}} <br>
+        Name add: {{Array[0]+firstName}} <br>
+        Name addition: {{Array[2]+lastName}} <br>
+        Name element(rinku)length: {{Array[2].length}} <br>
+        Full length : {{Array.length}} <br>
+        <h1>Opperations</h1>
+        add: {{a+b}} <br>
+        sub: {{a-b}} <br>
+        mul: {{a*b}} <br>
+        div: {{a/b}} <br>
+        <h1>Assignment cant work</h1>
+        a=0 in braket
+        <h1>condition</h1>
+        a==100: {{a==100}} <br>
+        b==60: {{b==60}} <br>
+        <h1>Url check</h1>
+        Url: {{siteUrl}} <br>
+        <h1>non routhing component used with links link </h1>
+        <app-navigation></app-navigation> <br>
+    </mat-tab>
+
+    <mat-tab label="2.Functions with mouse">
+        <h1>Define Function and call it</h1>
+        <button (click)="getfunc()">Click on it</button>
+        <h1>Define Function and call it parameter Passing</h1>
+        <button (click)="getfun('nametag')">Click on it</button>
+
+        <h1>warning button</h1>
+        <div>this will work in console</div>
+        <button (click)="myWarn('hello there')">click me</button>
+
+        <h1>log button</h1>
+        <div>this will work in console</div>
+        <button (click)="myLog('hello there')">click me</button>
+
+        <h1>error button</h1>
+        <div>this will work in console</div>
+        <button (click)="myError('hello there')">click me</button>
+
+        <h1>clear button</h1>
+        <div>this will work in console</div>
+        <button (click)="myClear('hello there')">click me</button>
+
+        <h1>Trace Complete Localise file button</h1>
+        <div>this will work in console</div>
+        <button (click)="myTrace('hello there')">click me</button>
+    </mat-tab>
+    \
+
+    <mat-tab label="3.input and mouse">
+        <h1>play with input keyup don't make a same id</h1>
+        keyup<input type="text" (keyup)="myLog('keyup')" /> <br>
+        <h1>play with input keyup don't make a same id</h1>
+        keydown<input type="text" (keydown)="myLog('keydown')" /> <br>
+        blur<input type="text" (blur)="myLog('blur')" /> <br>
+        continue<input type="text" #box (keyup)="myLog(box.value)" /> <br>
+        enter<input type="text" #box (keyup.enter)="myLog(box.value)" /> <br>
+        space<input type="text" #inbox (keyup.space)="myLog(inbox.value)" /> <br>
+        c<input type="text" #outbox (keyup.c)="myLog(outbox.value)" /> <br>
+
+
+        <div (mouseover)="myError('mouse in this region')" style="background-color: aqua;">
+            Play with mouse</div>
+
+
+
+        <div (mouseleave)="myLog('mouse out this region')" style="background-color: rgb(126, 91, 45);">
+            Play with mouse leave</div>
+    </mat-tab>
+    <mat-tab label="4. Property binding">
+        <input type="text" value="name"> <br><br>
+        <input type="text" value={{nameProperty}}> look difference in code<br><br>
+        <input type="text" [value]="nameProperty">look this programme <br><br>
+        function is also defined<button (click)="EnableBox()">Enable Text box</button>
+        <input type="text" [disabled]="disableBox" value={{nameProperty}}> look difference in code<br><br>
+        <input type="text" disabled={{disableBox}} [value]="nameProperty">look this programme <br><br>
+
+    </mat-tab>
+    <mat-tab label="5. if Block">
+        here block is false <br>
+        <h1 *ngIf="show else elseBlock">if Block</h1>
+        by default hidden block ng-tenplate <br>
+        <ng-template #elseBlock>
+            <h1>else block</h1>
+        </ng-template>
+        <ng-template>
+            <h1>else block</h1>
+        </ng-template>
+        so we unhide it by id<br>
+        <h1>PropertyBinding</h1>
+        <ng-template [ngIf]="bulb=='red'">
+            <h1>red dancer</h1>
+        </ng-template>
+        play with color <br>
+        <h1>switch case in angular</h1>
+        <div [ngSwitch]="color">
+            <h3 *ngSwitchCase="'red'">red box</h3>
+            <h3 *ngSwitchCase="'blue'">blue box</h3>
+            <h3 *ngSwitchCase="'green'">green box</h3>
+        </div>
+
+
+    </mat-tab>
+    <mat-tab label="6. for loop">
+        normal ngSwitchCase
+        <h4 *ngFor="let item of mobile">{{item}}</h4>
+        <h4 *ngFor="let item of mobileobj">{{item}}</h4>
+        <h4 *ngFor="let item of mobileobj">{{item.name}}</h4>
+        <h4 *ngFor="let item of mobileobj">{{item.prise}}</h4>
+        <h4 *ngFor="let item of mobileobj">{{item.name}} {{item.prise}}</h4>
+        <h1>with table</h1>
+        <table border="1">
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    Age
+                </td>
+            </tr>
+            <tr *ngFor='let item of mobileobj'>
+                <td>{{item.name}}</td>
+                <td>{{item.prise}}</td>
+            </tr>
+        </table>
+    </mat-tab>
+    
+    <mat-tab label="7. Forms">
+        simple <form #simpleForm="ngForm" (ngSubmit)=getUserValue(simpleForm.value)>
+            <input type="text" ngModule name="Username" placeholder="enter name"> <br>
+            <input type="text" ngModule name="age" placeholder="enter age"> <br>
+            <input type="text" ngModule name="address" placeholder="enter address"> <br>
+            <input type="password" ngModule name="password" placeholder="enter password"> <br>
+            <button>submit</button>
+            <h3>Binding style</h3>
+            <div style="color:aquamarine">alpha</div>
+            <div [style.color]="'pink'">beta</div>
+            <div [style.color]="beta">Dynamic beta</div>
+            <div [style.backgroundColor]="gamma">gamma</div>
+            <button (click)="updateColor()">Update color</button>
+           
+            <h1>conditional binding color change</h1> 
+            <div [style.color]="pixal?'yellow':'green'">Dynamic beta</div>
+            
+        </form>
+        watch video 
+        <div>Data transfer from parent to child</div>
+        <h1>bracket hero here
+            and also routing conneced with same hero
+            and alsojava have some initialiase thing
+            @Input() hero</h1>
+            1.and resuable component <br>
+            2.send data child to parent component is important
+        
+            </mat-tab>
+            <mat-tab label="8. Pipe">
+                1. pipe with string
+                2. pipe with data
+                3. pipe with slice
+                4. pipe with currency
+                etc.
+        
+                <h1>how pipe use |</h1>
+                <h2>Uppercase using pipe</h2> {{pipe | uppercase}} 
+                <h2>Lowercase using pipe</h2> {{pipe | lowercase}} 
+                <h2>titlecase using pipe</h2> {{pipe | titlecase}} 
+                <h2>Time stamp Date using pipe error with string</h2> {{today}} 
+                <h2>Date using pipe</h2> {{today | date}} 
+                <h2>Date full using pipe error</h2> {{today | date:'fulldate'}} 
+                <h2>Date full using pipe</h2> {{today | date:'fullDate'}} 
+                <h2>String</h2> {{str}} 
+                <h2>String slice form starting till 3</h2> {{str | slice:3}} 
+                <h2>String slice form starting till 3 fromlast too 7 also magic see</h2> {{str | slice:3:7}} 
+                <h1>Currency USD</h1>  {{curr | currency:'USD'}}
+                <h1>Currency EUR</h1>  {{curr | currency:'EUR'}}
+                <h1>Currency EUR</h1>  {{curr | currency:'CAD'}}
+                <h1>Currency EUR</h1>  {{curr | currency:'CLP'}}
+                <div>Install routing manually <h1>ng g m app-routing --flat --module=app</h1></div>
+            
+            
+            </mat-tab>
+            <mat-tab label="Template Driven Form see Dynamic validation also in videos">
+                <h1>Angular Template Driven Form</h1>
+                <h1>And get Value in console</h1>
+                <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+                    <input type="text" name="email" ngModel>
+                    <input type="password" name="password" ngModel>
+                    <button type="submit">Login</button>
+                </form>
+            </mat-tab>
+</mat-tab-group>
